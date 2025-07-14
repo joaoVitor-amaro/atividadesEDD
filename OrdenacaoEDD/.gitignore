@@ -27,3 +27,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+#clas
+/home/joao/Documentos/projetos/atiidadesEDD/OrdenacaoEDD/src/*.class
