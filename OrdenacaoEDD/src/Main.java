@@ -23,6 +23,5 @@ public class Main {
         ordenacao.selectionSort(copia2);
         endTime = System.nanoTime();
         System.out.println("Tempo do SelectionSort: " + (endTime - startTime)/1_000_000.0 + "ms");
-        System.out.println("");
     }
 }
