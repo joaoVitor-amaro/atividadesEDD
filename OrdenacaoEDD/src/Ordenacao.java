@@ -37,9 +37,6 @@ public class Ordenacao {
             numbers.set(j+1, aux);
         }
     }
-    public void clearList() {
-        this.nums.clear();
-    }
 
     public List<Long> getNums() {
         return this.nums;
