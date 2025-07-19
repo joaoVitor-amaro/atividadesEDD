@@ -14,9 +14,9 @@ public class Lista {
     public void inserir(int pos, int valor) {
         if(pos == 1) {
             inserirInicio(valor);
-        } else if(pos == tamanho + 1){ // Insere elementos depois da posição 1
+        } else if(pos == tamanho + 1){ 
             inserirFim(valor);
-        } else {
+        } else { // Insere elementos depois da posição 1
             inserirMeio(pos, valor);
         }
     }
