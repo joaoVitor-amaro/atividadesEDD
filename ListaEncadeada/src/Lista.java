@@ -75,6 +75,21 @@ public class Lista {
         }
         System.out.printf("Valor %d removido\n", atual.getValor());
         primeiro.setProximo(atual.getProximo());
+        tamanho--;
+    }
+
+    //Obter o valor da lista
+    public int obterValor(int pos) {
+        if(pos < 1 || pos > tamanho) {
+            return -1;
+        }
+        int cont = 1;
+        No atual = primeiro;
+        while (cont != pos) {
+            atual = atual.getProximo();
+            cont++;
+        }
+        return atual.getValor();
     }
 
     //Exibe os elementos da Lista
@@ -85,5 +100,9 @@ public class Lista {
             aux = aux.getProximo();
         }
         System.out.println("Null");
+    }
+
+    public int getTamanho() {
+        return tamanho;
     }
 }
