@@ -14,7 +14,7 @@ public class Lista {
     public void inserir(int pos, int valor) {
         if(pos == 1) {
             inserirInicio(valor);
-        } else if(pos == tamanho + 1){ 
+        } else if(pos == tamanho + 1){
             inserirFim(valor);
         } else { // Insere elementos depois da posição 1
             inserirMeio(pos, valor);
@@ -102,6 +102,16 @@ public class Lista {
             cont++;
         }
         return atual.getValor();
+    }
+
+    //Modificar o valor
+    public void modificarValor(int pos, int valor) {
+        int cont = 1;
+        No atual = primeiro;
+        while (cont > pos && atual != null) {
+            atual = atual.getProximo();
+        }
+        atual.getProximo().setValor(valor);
     }
 
     //Exibe os elementos da Lista
