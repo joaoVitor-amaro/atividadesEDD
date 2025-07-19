@@ -14,8 +14,10 @@ public class Lista {
     public void inserir(int pos, int valor) {
         if(pos == 1) {
             inserirInicio(valor);
-        } else { // Insere elementos depois da posição 1
-            inserirPos(pos, valor);
+        } else if(pos == tamanho + 1){ // Insere elementos depois da posição 1
+            inserirFim(valor);
+        } else {
+            inserirMeio(pos, valor);
         }
     }
 
@@ -27,7 +29,17 @@ public class Lista {
         System.out.printf("Valor %d inserido\n", novoNo.getValor());
     }
 
-    public void inserirPos(int pos, int valor) {
+    public void inserirFim(int valor) {
+        No atual = primeiro;
+        while (atual.getProximo() != null) {
+            atual = atual.getProximo();
+        }
+        No novoNo = new No(valor);
+        atual.setProximo(novoNo);
+        tamanho++;
+    }
+
+    public void inserirMeio(int pos, int valor) {
         if(pos < 1 || pos > tamanho) {
             System.out.println("Posição inválida");
             return;
