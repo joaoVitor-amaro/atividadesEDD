@@ -77,7 +77,7 @@ public class Lista {
         primeiro.setProximo(atual.getProximo());
     }
 
-    //Exibe os elementos da 
+    //Exibe os elementos da Lista
     public void exibirLista() {
         No aux = primeiro;
         while (aux != null) {
