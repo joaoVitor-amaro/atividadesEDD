@@ -7,7 +7,6 @@ public class Main {
         lista.exibirLista();
         lista.remove(3);
         lista.exibirLista();
-        System.out.println(lista.getTamanho());
         lista.inserir(2, 10);
         lista.exibirLista();
         lista.modificarValor(2, 15);
