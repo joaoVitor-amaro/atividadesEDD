@@ -37,6 +37,7 @@ public class Lista {
         No novoNo = new No(valor);
         atual.setProximo(novoNo);
         tamanho++;
+        System.out.printf("Valor %d inserido\n", novoNo.getValor());
     }
 
     public void inserirMeio(int pos, int valor) {
@@ -46,7 +47,7 @@ public class Lista {
         }
         int cont = 1;
         No atual = primeiro;
-        while (cont < pos && atual != null) {
+        while (cont < pos - 1 && atual != null) {
             atual = atual.getProximo();
             cont++;
         }
@@ -80,13 +81,14 @@ public class Lista {
             return;
         }
         int cont = 1;
-        No atual = primeiro;
+        No atual = primeiro, anterior = null;
         while (cont < pos && atual != null) {
+            anterior = atual;
             atual = atual.getProximo();
             cont++;
         }
         System.out.printf("Valor %d removido\n", atual.getValor());
-        primeiro.setProximo(atual.getProximo());
+        anterior.setProximo(atual.getProximo());
         tamanho--;
     }
 
